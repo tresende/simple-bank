@@ -7,30 +7,71 @@ const validateValue = (code, value) => {
         resolve();
       }
       resolve();
-      // reject(err);
+      // reject();
     }).catch((err) => {
       reject(err);
     });;
   });
 };
 
-const increaseTotal = (code, value) => {
+const increaseTotal = (to, from, value) => {
+  value = parseInt(value);
   return new Promise((resolve, reject) => {
-    User.findOne({
-      code
-    }).then((user) => {
-      value = parseInt(value);
-      let total = user.total + value;
-      User.update({ code }).set({ total }).then(() => resolve());
+    Coin.find({
+      userCode : from,
+    }).limit(value).then((coins) =>{
+      Coin.update({
+        id : coins.map((item) => item.id),
+      }).set({
+        userCode : to,
+      }).then(() => {
+        User.findOne({
+          code: from
+        }).then((userFrom) => {
+          var total = userFrom.total;
+          total -= value; 
+          User.update({ from }).set({ total }).then(() =>{
+            User.findOne({
+              code: to
+            }).then((userFrom) => {
+              var total = userFrom.total;
+              total += value; 
+              User.update({ to }).set({ total }).then(() => resolve());
+            }); 
+          });
+        })
+      })
     }).catch((err) => {
-      reject(err);
-    });
+        reject(err);
+      });
+
+
+    // User.findOne({
+    //   from
+    // }).then((user) => {
+
+    //   Coin.update({
+    //     userCode : from,
+    //   }).set({
+    //     userCode : to,
+    //   })then((coins) => {
+     
+        
+    //     Coin.update({ from }).set({ total }).then(() => resolve());
+
+
+    //   });  
+
+
+
+    //   value = parseInt(value);
+    //   let total = user.total + value;
+    //   User.update({ from }).set({ total }).then(() => resolve());
+    // }).catch((err) => {
+    //   reject(err);
+    // });
   })
 };
-
-const decreaseTotal = (code, value) => {
-  return increaseTotal(code, value * -1);
-}
 
 module.exports = {
 
@@ -40,8 +81,7 @@ module.exports = {
       let from = transaction.from;
       let value = transaction.value;
       validateValue(from, value)
-        .then(() => increaseTotal(from, value))
-        .then(() => decreaseTotal(to, value))
+        .then(() => increaseTotal(from, to, value))
         .then(() => resolve())
         .catch((err) => reject(err));
     });
