@@ -1,0 +1,22 @@
+module.exports = {
+  create: (req, res) => {
+    return res.status(200).json({})
+  }
+};
+
+
+/:controller/find/:id?
+/:controller/create
+/:controller/update/:id
+/:controller/destroy/:id
+
+..		
+add.js	Refactor formatting of UsageError into blueprints hook	11 months ago
+create.js	Lint fixes, and updates to comments	9 months ago
+destroy.js	Refactor formatting of UsageError into blueprints hook	11 months ago
+find.js	Refactor formatting of UsageError into blueprints hook	11 months ago
+findOne.js	Refactor formatting of UsageError into blueprints hook	11 months ago
+populate.js	Refactor formatting of UsageError into blueprints hook	11 months ago
+remove.js	Refactor formatting of UsageError into blueprints hook	11 months ago
+replace.js	Lint fixes, and updates to comments	9 months ago
+update.js	Lint fixes, and updates to comments
