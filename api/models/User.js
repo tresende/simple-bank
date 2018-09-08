@@ -16,7 +16,7 @@ module.exports = {
     },
     total: {
       type: 'number',
-      defaultsTo: 0,
+      defaultsTo: 100,
       columnType: 'FLOAT'
     },
   }
