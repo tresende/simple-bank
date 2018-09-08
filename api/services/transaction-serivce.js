@@ -3,17 +3,16 @@ const validateValue = (code, value) => {
     User.findOne({
       code
     }).then((user) => {
-      if (user.total > value) {
+      if (user.total >= value) {
         resolve();
+      }else{
+        reject();
       }
-      resolve();
-      // reject();
     }).catch((err) => {
       reject(err);
     });;
   });
 };
-
 
 const changeTotal = (code, value) => {
   return new Promise((resolve, reject) => {
@@ -53,7 +52,7 @@ module.exports = {
       let to = transaction.to;
       let from = transaction.from;
       let value = transaction.value;
-      validateValue(from, value)
+      validateValue(to, value)
         .then(() => increaseTotal(from, to, value))
         .then(() => resolve())
         .catch((err) => reject(err));
