@@ -1,4 +1,4 @@
 # fiat-coins
 
 
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/tresende/fiat-coins>&branch=master)
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=github.com/tresende/fiat-coins.git&branch=master)
