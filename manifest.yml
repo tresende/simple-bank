@@ -1,4 +1,4 @@
 applications:
- - name: chat-tools
+ - name: fiat-coins
    random-route: true
    memory: 128M
