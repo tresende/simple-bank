@@ -7,3 +7,9 @@ app.config(function ($routeProvider, $locationProvider) {
     controller: 'homeController'
   })
 });
+
+//cadastro
+//home
+//extrato
+//transferencia
+//investir
