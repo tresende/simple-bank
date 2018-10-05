@@ -5,13 +5,28 @@
   <title>Sample Bank</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <base href="/">
+  <link rel="stylesheet" href="/dependencies/lib/materialize/materialize.min.css">
+
 </head>
 
 <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+            
   <%- body %>
   <script src="/dependencies/sails.io.js"></script>
-  <script src="/dependencies/lib/angular.min.js"></script>
-  <script src="/dependencies/lib/angular-route.min.js"></script>
+  <script src="/dependencies/lib/angular/angular.min.js"></script>
+  <script src="/dependencies/lib/angular/angular-route.min.js"></script>
+  <script src="/dependencies/lib/jquery/jquery-3.3.1.min.js"></script>
+  <script src="/dependencies/lib/materialize/materialize.min.js"></script>
   <script src="/js/app/app.js"></script>
   <script src="/js/app/views/home/home.controller.js"></script>
 </body>
