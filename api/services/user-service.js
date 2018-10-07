@@ -2,6 +2,11 @@ const crypto = require('crypto'),
   algorithm = 'aes-256-ctr',
   password = 'galo-doido';
 
+const getAccountNumber = async () => {
+  let total = await User.count({});
+  return String(total).padStart(6, '0');
+}
+
 const encrypt = (text) => {
   var cipher = crypto.createCipher(algorithm, password)
   var crypted = cipher.update(text, 'utf8', 'hex')
@@ -16,12 +21,18 @@ const decrypt = (text) => {
   return dec;
 }
 
-const createUser = (user) => {
+const createUser = async (user) => {
   user.password = encrypt(user.password);
+  user.code = await getAccountNumber();
   return new Promise((resolve, reject) => {
-    User.create(user)
-      .then((newUser) => resolve(newUser))
-      .catch((err) => reject(err));
+    User.create(user).fetch().exec((err, result) => {
+      if (err) {
+        reject(err);
+      } else {
+        result.token = '123';
+        resolve(result);
+      }
+    });
   })
 }
 

@@ -11,8 +11,8 @@
           </div>
         </div>
         <div class='input-field col s12'>
-          <input ng-model="login.number" required="required" class='validate' type='number' name='number' id='number' />
-          <label for='number'>Conta</label>
+          <input ng-model="login.code" required="required" class='validate' type='text' name='code' id='code' />
+          <label for='code'>Conta</label>
         </div>
         <div class='input-field col s12'>
           <input ng-model="login.password" required="required" class='validate' type='password' name='password' id='password' />
@@ -45,6 +45,15 @@
         <button type='submit' class='pink accent-2 col s12 btn btn-large waves-effect'>Salvar</button>
       </div>
     </form>
+  </div>
+</div>
+<div id="modal-new-user" class="modal">
+  <div class="modal-content">
+    <h4>Conta Criada!</h4>
+    <p>Seu cadastro foi realizado com sucesso e o número da sua conta é <b>{{newAccountCode}}</b></p>
+    <div class="modal-footer">
+      <button type='button' ng-click="redirect()" class='pink accent-2 col s12 btn btn-large waves-effect'>Fechar</button>
+    </div>
   </div>
 </div>
 <style>
