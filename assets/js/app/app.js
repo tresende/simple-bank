@@ -20,12 +20,4 @@ function startUi() {
   });
 }
 
-
 startUi();
-//login -backend
-//cadastro -ok
-//home -backend
-//extrato -encrypt
-//transferencia
-//investir
-//comprar produtos
