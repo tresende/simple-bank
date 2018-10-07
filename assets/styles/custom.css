@@ -1,3 +1,42 @@
-nav a.sidenav-trigger{
-    display: block;
+nav a.sidenav-trigger {
+  display: block;
+}
+
+.collection .secondary-content {
+  color: black;
+}
+
+.user {
+  background-image: url('/images/avatars.png');
+  background-size: 298px;
+}
+
+.user-1 {
+  background-position-x: -4px;
+  background-position-y: -4px;
+}
+
+.user-2 {
+  background-position-x: -155px;
+  background-position-y: -4px;
+}
+
+.user-3 {
+  background-position-x: -230px;
+  background-position-y: -4px;
+}
+
+.user-4 {
+  background-position-x: -4px;
+  background-position-y: -81px;
+}
+
+.user-5 {
+  background-position-x: -4px;
+  background-position-y: -157px;
+}
+
+.user-6 {
+  background-position-x: -230px;
+  background-position-y: -156px;
 }
