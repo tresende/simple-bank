@@ -1,1 +1,20 @@
-{{text}}
+<ul class="collection">
+  <li ng-repeat="item in data" class="collection-item avatar">
+    <i ng-if="item.type == 0" class="material-icons circle green">add</i>
+    <i ng-if="item.type == 1" class="material-icons circle red">clear</i>
+    <span class="title">{{item.to}}</span>
+    <p>{{item.value}}<br />
+      {{item.date | date: 'dd/MM/yyyy'}}
+    </p>
+    <a ng-click="detail(item)" href="javascript:;" class="secondary-content"><i class="material-icons">zoom_in</i></a>
+  </li>
+</ul>
+<div class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="javascript:;" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
