@@ -27,7 +27,7 @@ module.exports.routes = {
   // '/': {
   //   view: 'pages/homepage'
   // },
-  "r|^\/(?!.*api).*|": {
+  "GET r|^\/(?!.*api).*|": {
     view: 'homepage',
     skipAssets: true
   }
