@@ -40,3 +40,47 @@ nav a.sidenav-trigger {
   background-position-x: -230px;
   background-position-y: -156px;
 }
+
+.sumary {
+  margin: 0px;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
+.login-form {
+  display: table;
+  position: absolute;
+  height: 101%;
+  width: 101%;
+  background-color: rgba(1, 2, 3, .5);
+}
+
+.login-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.bg-video {
+  position: absolute;
+}
+
+.login-text {
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  font-size: 4em;
+}
+
+.login-middle input {
+  color: white !important;
+}
+
+.login-middle a {
+  color: white;
+}

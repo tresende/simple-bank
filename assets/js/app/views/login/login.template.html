@@ -1,0 +1,39 @@
+<video autoplay muted loop class="bg-video">
+  <source src="/videos/bg.mp4" type="video/mp4">
+</video>
+<main class="login-form">
+  <center class="login-middle">
+    <h5 class="login-text">simpleBank</h5>
+    <div class="container">
+      <form class="col s12" ng-submit="submit()">
+        <div class='row'>
+          <div class='col s12'>
+          </div>
+        </div>
+        <div class='input-field col s12'>
+          <input ng-model="login.number" required="required" class='validate' type='number' name='number' id='number' />
+          <label for='number'>Conta</label>
+        </div>
+        <div class='input-field col s12'>
+          <input ng-model="login.password" required="required" class='validate' type='password' name='password' id='password' />
+          <label for='password'>Senha</label>
+        </div>
+        <center>
+          <div class='row'>
+            <button type='submit' class='pink accent-2 col s12 btn btn-large waves-effect'>Entrar</button>
+          </div>
+        </center>
+      </form>
+    </div>
+    <a href="#!">Criar uma conta</a>
+  </center>
+
+  <div class="section"></div>
+  <div class="section"></div>
+</main>
+<style>
+  body {
+    overflow: hidden;
+  }
+
+</style>

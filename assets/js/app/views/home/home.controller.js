@@ -1,4 +1,6 @@
-app.controller('homeController', function ($scope) {
+app.controller('homeController', function ($scope, $rootScope) {
+  $rootScope.showAppBar = true;
+
 
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, {});
