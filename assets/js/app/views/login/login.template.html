@@ -25,12 +25,28 @@
         </center>
       </form>
     </div>
-    <a href="#!">Criar uma conta</a>
+    <a ng-click="newAccount()" href="javascript:;">Criar uma conta</a>
   </center>
-
-  <div class="section"></div>
-  <div class="section"></div>
 </main>
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Nova Conta</h4>
+    <form class="col s12" ng-submit="addNewAccount()">
+      <div class="input-field col s12">
+        <input id="new-name" ng-model="newUser.name" type="text" class="validate">
+        <label for="new-name">Nome</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="new-pass" ng-model="newUser.password" type="password" class="validate">
+        <label for="new-pass">Senha</label>
+      </div>
+      <div class="modal-footer">
+        <button type='submit' class='pink accent-2 col s12 btn btn-large waves-effect'>Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
 <style>
   body {
     overflow: hidden;

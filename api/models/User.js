@@ -8,16 +8,11 @@
 
 module.exports = {
   attributes: {
-    code: {
+    password: {
       type: 'string',
     },
     name: {
       type: 'string',
-    },
-    total: {
-      type: 'number',
-      defaultsTo: 0,
-      columnType: 'FLOAT'
-    },
+    }
   }
 };

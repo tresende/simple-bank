@@ -6,6 +6,9 @@ app.config(function ($routeProvider, $locationProvider) {
   }).when("/login", {
     templateUrl: './js/app/views/login/login.template.html',
     controller: 'loginController',
+  }).when("/new-account", {
+    templateUrl: './js/app/views/new-account/new-account.template.html',
+    controller: 'newAccountController',
   });
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('');
@@ -19,7 +22,7 @@ function startUi() {
 
 
 startUi();
-//login
+//login -ok
 //cadastro
 //home -ok
 //extrato -ok
