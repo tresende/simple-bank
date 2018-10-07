@@ -4,7 +4,6 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
   var instances = M.Modal.init(elems, {});
 
   setTimeout(function () {
-
     $scope.login = {
       code: '000038',
       password: '123456',

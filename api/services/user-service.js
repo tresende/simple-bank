@@ -18,10 +18,11 @@ const decrypt = (text) => {
   var decipher = crypto.createDecipher(algorithm, password)
   var dec = decipher.update(text, 'hex', 'utf8')
   dec += decipher.final('utf8');
-  return dec;
+  return dec.toString('utf8');
 }
 
 const createUser = async (user) => {
+
   user.password = encrypt(user.password);
   user.code = await getAccountNumber();
   return new Promise((resolve, reject) => {
@@ -37,11 +38,14 @@ const createUser = async (user) => {
 }
 
 const searchUser = (user) => {
-  user.password = decrypt(user.password);
   return new Promise((resolve, reject) => {
-    User.findOne(user)
-      .then((newUser) => {
-        return 'abc';
+    User.findOne({
+        code: user.code,
+        password: encrypt(new Buffer(user.password, "utf8"))
+      })
+      .then((item) => {
+        item.token = '123';
+        resolve(item);
       })
       .catch((err) => reject(err));
   })
