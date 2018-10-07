@@ -3,12 +3,21 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, {});
 
+  setTimeout(function () {
+
+    $scope.login = {
+      code: '000038',
+      password: '123456',
+    }
+  }, 1000)
+
   $scope.newAccount = function () {
     instances[0].open();
   }
 
   $scope.submit = function () {
-    authService.auth($scope.newUser).then(function(data){
+    authService.auth($scope.login).then(function (data) {
+      localStorage.setItem('token', data.token);
       $location.path("/");
     });
   };
@@ -18,8 +27,15 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
   };
 
   $scope.addNewAccount = function () {
-    userService.save($scope.newUser).then(function(data){
-      $location.path("/");
+    userService.save($scope.newUser).then(function (response) {
+      $scope.newAccountCode = response.data.code
+      instances[1].open();
+      localStorage.setItem('token', data.token);
     });
   }
+
+  $scope.redirect = function () {
+    $location.path("/");
+  }
+
 });

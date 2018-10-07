@@ -11,6 +11,9 @@ module.exports = {
     password: {
       type: 'string',
     },
+    code: {
+      type: 'string',
+    },
     name: {
       type: 'string',
     }
