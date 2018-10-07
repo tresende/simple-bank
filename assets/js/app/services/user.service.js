@@ -1,6 +1,5 @@
 app.service("userService",
     function ($http) {
-    
         var url = 'api/user/';
         var request = {};
         save = function (item) {

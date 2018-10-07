@@ -25,10 +25,29 @@ const createUser = (user) => {
   })
 }
 
+const searchUser = (user) => {
+  user.password = decrypt(user.password);
+  return new Promise((resolve, reject) => {
+    User.findOne(user)
+      .then((newUser) => {
+        return 'abc';
+      })
+      .catch((err) => reject(err));
+  })
+}
+
 module.exports = {
   save: (user) => {
     return new Promise((resolve, reject) => {
       createUser(user)
+        .then((newUser) => resolve(newUser))
+        .catch((err) => reject(err));
+    });
+  },
+
+  search: (user) => {
+    return new Promise((resolve, reject) => {
+      searchUser(user)
         .then((newUser) => resolve(newUser))
         .catch((err) => reject(err));
     });

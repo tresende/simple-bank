@@ -1,4 +1,4 @@
-app.controller('loginController', function ($scope, $rootScope, $location, userService) {
+app.controller('loginController', function ($scope, $rootScope, $location, userService, authService) {
   $rootScope.showAppBar = false;
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, {});
@@ -8,7 +8,9 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
   }
 
   $scope.submit = function () {
-    $location.path("/");
+    authService.auth($scope.newUser).then(function(data){
+      $location.path("/");
+    });
   };
 
   $scope.newAccountRedirect = function () {
@@ -17,8 +19,7 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
 
   $scope.addNewAccount = function () {
     userService.save($scope.newUser).then(function(data){
-      console.log(data);
-    })
-    // $location.path("/");
+      $location.path("/");
+    });
   }
 });

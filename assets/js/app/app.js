@@ -22,10 +22,10 @@ function startUi() {
 
 
 startUi();
-//login -ok
-//cadastro
-//home -ok
-//extrato -ok
+//login -backend
+//cadastro -ok
+//home -backend
+//extrato -encrypt
 //transferencia
 //investir
 //comprar produtos
