@@ -1,12 +1,10 @@
 app.controller('homeController', function ($scope, $rootScope) {
   $rootScope.showAppBar = true;
 
-
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, {});
 
   $scope.detail = function (item) {
-    console.log(item);
     instances[0].open();
   }
 
