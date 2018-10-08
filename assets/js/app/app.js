@@ -14,6 +14,18 @@ app.config(function ($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
 });
 
+
+app.run(function ($rootScope, $location) {
+  $rootScope.$on('$routeChangeStart', function (event, next, current) {
+    var token = localStorage.getItem('token');
+    if (!token) {
+      $location.path("/login");
+    }
+  });
+});
+
+
+
 function startUi() {
   $(document).ready(function () {
     $('.sidenav').sidenav();
