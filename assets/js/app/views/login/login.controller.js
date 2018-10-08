@@ -3,13 +3,6 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems, {});
 
-  setTimeout(function () {
-    $scope.login = {
-      code: '000005',
-      password: '000005',
-    }
-  }, 1000)
-
   $scope.newAccount = function () {
     instances[0].open();
   }
