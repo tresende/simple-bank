@@ -5,8 +5,8 @@ app.controller('loginController', function ($scope, $rootScope, $location, userS
 
   setTimeout(function () {
     $scope.login = {
-      code: '000038',
-      password: '123456',
+      code: '000005',
+      password: '000005',
     }
   }, 1000)
 
