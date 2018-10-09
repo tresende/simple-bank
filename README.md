@@ -1,4 +1,4 @@
-# fiat-coins
+# Simple Bank
 
+* A simple bank with **blockchain-based transactions**
 
-Hackaton v1
