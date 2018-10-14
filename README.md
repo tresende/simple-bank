@@ -1,7 +1,8 @@
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/tresende/simple-bank.git)
+
 # Simple Bank
 
 * A simple bank with **blockchain-based transactions**
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/tresende/simple-bank.git)
 
 ## Development Environment Setup
 
