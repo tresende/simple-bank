@@ -1,5 +1,4 @@
 [![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/tresende/simple-bank.git)
-[![Travis CI](https://travis-ci.org/tresende/simple-bank.svg?branch=master)](https://travis-ci.org/tresende/simple-bank)
 
 # Simple Bank
 
