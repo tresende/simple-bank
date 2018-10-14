@@ -1,5 +1,5 @@
 {
-  "name": "fiat-coins",
+  "name": "simple-bank",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -30,7 +30,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thiago/fiat-coins.git"
+    "url": "git://github.com/thiago/simple-bank.git"
   },
   "author": "Thiago Resende",
   "license": "MIT",
