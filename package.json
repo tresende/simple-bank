@@ -32,8 +32,8 @@
     "type": "git",
     "url": "git://github.com/thiago/fiat-coins.git"
   },
-  "author": "thiago",
-  "license": "",
+  "author": "Thiago Resende",
+  "license": "MIT",
   "engines": {
     "node": ">=8.11"
   }
