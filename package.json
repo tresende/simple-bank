@@ -25,12 +25,13 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "NODE_ENV=development node app.js"
+    "start": "NODE_ENV=development node app.js",
+    "postinstall": "grunt build"
   },
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thiago/simple-bank.git"
+    "url": "git://github.com/tresende/simple-bank.git"
   },
   "author": "Thiago Resende",
   "license": "MIT",
