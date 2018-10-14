@@ -1,1 +1,11 @@
 
+deploy:
+  provider: bluemixcloudfoundry
+  skip_cleanup: true
+  manifest: manifest.yml
+  username: $IBM_CLOUD_USER
+  password: $IBM_CLOUD_PASSWORD
+  organization: $IBM_CLOUD_ORGANIZATION
+  space: $IBM_CLOUD_SPACE
+  on:
+    branch: master
