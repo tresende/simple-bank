@@ -17,7 +17,6 @@ const validateValue = (code, value) => {
 const changeTotal = (code, value) => {
   return new Promise((resolve, reject) => {
     User.findOne({ code }).then((userFrom) => {
-      //aqui vai ficar o hyperleger
       var total = userFrom.total;
       total += value;
       User.update({code})
