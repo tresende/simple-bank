@@ -12,7 +12,7 @@
     "async": "2.0.1",
     "cfenv": "^1.0.4",
     "crypto": "^1.0.1",
-    "grunt": "1.0.1",
+    "grunt": "1.5.3",
     "nodemon": "^1.18.4",
     "sails": "^1.0.2",
     "sails-hook-grunt": "^3.0.2",
